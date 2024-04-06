@@ -4,8 +4,7 @@ package utils.ListaProduct;
 public class ListaProdutosDisponiveis extends ListaProdutosAbstrata  {
     private static ListaProdutosDisponiveis instance;
 
-    @Override
-    public  synchronized ListaProdutosDisponiveis getInstance() {
+    public synchronized static ListaProdutosDisponiveis getInstance() {
         if(instance == null){
             instance = new ListaProdutosDisponiveis();
         }

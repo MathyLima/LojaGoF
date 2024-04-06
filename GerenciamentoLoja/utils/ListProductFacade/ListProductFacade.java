@@ -1,4 +1,4 @@
-package utils;
+package utils.ListProductFacade;
 
 import utils.ListaProduct.ListaProdutosDisponiveis;
 import utils.ListaProduct.ListaProdutosNaoDisponiveis;
@@ -9,14 +9,14 @@ import utils.Product.ProdutoNaoDisponivel;
 
 public class ListProductFacade {
     private static ListProductFacade instance;
-    private ListaProdutosDisponiveis listaProdutosDisponiveis = new ListaProdutosDisponiveis() ;
-    private ListaProdutosNaoDisponiveis listaProdutosNaoDisponiveis = new ListaProdutosNaoDisponiveis();
+    private ListaProdutosDisponiveis listaProdutosDisponiveis  ;
+    private ListaProdutosNaoDisponiveis listaProdutosNaoDisponiveis;
     private ProdutoController produtoController = new ProdutoController();
 
     private ListProductFacade(){
 
-        listaProdutosDisponiveis = listaProdutosDisponiveis.getInstance();
-        listaProdutosNaoDisponiveis = listaProdutosNaoDisponiveis.getInstance();
+        listaProdutosDisponiveis = ListaProdutosDisponiveis.getInstance();
+        listaProdutosNaoDisponiveis = ListaProdutosNaoDisponiveis.getInstance();
         produtoController = produtoController.getInstance();
     }
 

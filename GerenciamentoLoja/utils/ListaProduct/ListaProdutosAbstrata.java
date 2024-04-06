@@ -11,7 +11,6 @@ public abstract class ListaProdutosAbstrata implements ListaProdutosInterface {
     public ListaProdutosAbstrata() {
         this.produtos = new ArrayList<>();
     }
-
     @Override
     public void adicionarProduto(ProdutoAbstrato produto) {
         produtos.add(produto);

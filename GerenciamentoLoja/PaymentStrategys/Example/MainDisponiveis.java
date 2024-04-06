@@ -1,16 +1,16 @@
-package utils.ListaProduct;
+package PaymentStrategys.Example;
 
 import utils.Product.ProdutoAbstrato;
 import utils.Product.ProdutoDisponivel;
 import utils.Product.ProdutoNaoDisponivel;
-import utils.ListProductFacade;
+import utils.ListProductFacade.ListProductFacade;
+import utils.ListaProduct.ListaProdutosDisponiveis;
+import utils.ListaProduct.ListaProdutosNaoDisponiveis;
 
 public class MainDisponiveis {
     public static void main(String[] args) {
-        ListaProdutosDisponiveis listaProdutosDisponiveis =  new ListaProdutosDisponiveis();
-        listaProdutosDisponiveis = listaProdutosDisponiveis.getInstance();
-        ListaProdutosNaoDisponiveis listaProdutosNaoDisponiveis = new ListaProdutosNaoDisponiveis();
-        listaProdutosNaoDisponiveis =  listaProdutosNaoDisponiveis.getInstance();
+        ListaProdutosDisponiveis listaProdutosDisponiveis = ListaProdutosDisponiveis.getInstance();
+        ListaProdutosNaoDisponiveis listaProdutosNaoDisponiveis = ListaProdutosNaoDisponiveis.getInstance();
         // Obtendo a instância única da fachada de lista de produtos
         ListProductFacade facade =  ListProductFacade.getInstance();
 
