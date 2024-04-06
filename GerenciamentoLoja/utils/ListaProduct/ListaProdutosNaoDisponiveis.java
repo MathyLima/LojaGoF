@@ -1,14 +1,12 @@
 package utils.ListaProduct;
 
-import java.util.List;
 
-import utils.Product.ProdutoAbstrato;
 
-public class ListaProdutosNaoDisponiveis extends ListaProdutosAbstrata implements ListaProdutosInterface {
+public class ListaProdutosNaoDisponiveis extends ListaProdutosAbstrata {
     private static ListaProdutosNaoDisponiveis instance;
 
     @Override
-    public ListaProdutosNaoDisponiveis getInstance() {
+    public synchronized ListaProdutosNaoDisponiveis getInstance() {
         if(instance == null){
             instance = new ListaProdutosNaoDisponiveis();
         }
